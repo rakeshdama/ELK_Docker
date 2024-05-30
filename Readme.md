@@ -15,7 +15,9 @@ It's important for students to have at least 8GB of RAM available for their comp
 
 To start or run the docker containers
 
-``` docker-compose up ```
+```
+docker-compose up
+```
 
 To rebuild the docker containers
 
