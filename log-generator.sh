@@ -1,7 +1,8 @@
 #!/bin/bash
 
 generate_log() {
-  # cat ./dnslog.json | nc -N logstash 5000
+  # Run below command in log-generator container to send logs to Logstash
+  # nc -N logstash 5000 < ./dnslog.json
   echo "testing logs"
 }
 
