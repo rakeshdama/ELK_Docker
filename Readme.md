@@ -19,5 +19,5 @@ To start or run the docker containers
 
 To rebuild the docker containers
 
-``` docker-compose build ```
-``` docker-compose up ```
+``` docker-compose build
+    docker-compose up ```
