@@ -57,6 +57,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: log-generator
     links:
       - logstash
     depends_on:
