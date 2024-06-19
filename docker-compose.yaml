@@ -34,9 +34,9 @@ services:
       - "5601:5601"
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
+    # depends_on:
+    #   elasticsearch:
+    #     condition: service_healthy
 
   logstash:
     image: docker.elastic.co/logstash/logstash:8.13.4
@@ -49,9 +49,9 @@ services:
     command: logstash -f /usr/share/logstash/pipeline/logstash.conf
     links:
       - elasticsearch
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
+    # depends_on:
+    #   elasticsearch:
+    #     condition: service_healthy
 
   log-generator:
     build:
@@ -60,6 +60,6 @@ services:
     container_name: log-generator
     links:
       - logstash
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
+    # depends_on:
+    #   elasticsearch:
+    #     condition: service_healthy
